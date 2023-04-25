@@ -1,0 +1,16 @@
+.expense-form{
+   background-color: rgb(96, 99, 98);
+   color: white;
+   padding: 31px;
+   border-radius: 11px;
+   
+
+}
+input{
+
+   padding: 5px;
+   border-radius: 3px;
+   margin-left: 12px;
+   align-items: last baseline;
+   border-radius: 5px ;
+}
