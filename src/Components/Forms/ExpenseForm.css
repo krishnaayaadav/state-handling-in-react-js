@@ -14,3 +14,8 @@ input{
    align-items: last baseline;
    border-radius: 5px ;
 }
+
+.inputs-errors{
+   color: rgb(234, 60, 60);
+   text-decoration: double;
+}
