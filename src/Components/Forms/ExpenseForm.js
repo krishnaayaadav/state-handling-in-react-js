@@ -2,6 +2,7 @@ import './ExpenseForm.css'
 import React, {useState} from 'react';
 
 
+
 const ExpenseForm = ()=>{
    // to raise validation errors
    let [errors, raiseErro] = useState('');
@@ -48,11 +49,15 @@ const ExpenseForm = ()=>{
       }
    };
 
-   const form_submit_handler = () =>{
+   const formSubmitHandler = (event) =>{
       if(exp_date == undefined){
          raiseDate('Date is required ')
+
       }else{
-         
+         event.preventDefault();
+         console.log(event)
+         console.log(exp_amount, exp_title, exp_date)
+
       }
 
 
@@ -60,7 +65,7 @@ const ExpenseForm = ()=>{
    return (
       <div className="expense-form">
 
-         <form action="">
+         <form action="" onSubmit={formSubmitHandler}>
             <div className="expense_form_controler">
 
                <div className="input_field_controler">
@@ -86,7 +91,7 @@ const ExpenseForm = ()=>{
             </div>
 
             <div className="submit_action">
-               <button type='submit' onClick={form_submit_handler}>Add Expense</button>
+               <button type='submit'>Add Expense</button>
 
             </div>
            
